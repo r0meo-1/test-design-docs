@@ -1,0 +1,49 @@
+name: Docs Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  structure:
+    name: Validate QA artifacts structure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check required artifacts exist
+        run: |
+          set -e
+          required=(
+            "test-plan.md"
+            "test-strategy.md"
+            "traceability-matrix.md"
+            "test-cases/booking-flow.md"
+            "test-cases/payment-flow.md"
+            "test-cases/auth-and-access.md"
+            "checklists/smoke.md"
+            "checklists/regression.md"
+            "checklists/cross-browser.md"
+            "checklists/release.md"
+            "bug-reports/BUG-001-double-charge-on-retry.md"
+            "bug-reports/BUG-002-overbooking-no-seats.md"
+            "bug-reports/BUG-003-idor-foreign-booking.md"
+          )
+          missing=0
+          for f in "${required[@]}"; do
+            if [ -f "$f" ]; then
+              echo "OK   $f"
+            else
+              echo "MISS $f"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "Отсутствуют обязательные артефакты."
+            exit 1
+          fi
+          echo "Все обязательные артефакты на месте."
