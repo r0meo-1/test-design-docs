@@ -1,4 +1,4 @@
-# qa-test-cases — Manual QA Artifacts
+# test-design-docs — Manual QA Artifacts
 
 [![Docs Check](https://github.com/r0meo-1/test-design-docs/actions/workflows/docs-check.yml/badge.svg)](https://github.com/r0meo-1/test-design-docs/actions/workflows/docs-check.yml)
 ![Manual QA](https://img.shields.io/badge/Manual%20QA-Test%20Design-0a7)
