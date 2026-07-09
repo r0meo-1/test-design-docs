@@ -1,6 +1,6 @@
 # qa-test-cases — Manual QA Artifacts
 
-[![Docs Check](https://github.com/r0meo-1/qa-test-cases/actions/workflows/docs-check.yml/badge.svg)](https://github.com/r0meo-1/qa-test-cases/actions/workflows/docs-check.yml)
+[![Docs Check](https://github.com/r0meo-1/test-design-docs/actions/workflows/docs-check.yml/badge.svg)](https://github.com/r0meo-1/test-design-docs/actions/workflows/docs-check.yml)
 ![Manual QA](https://img.shields.io/badge/Manual%20QA-Test%20Design-0a7)
 ![Jira](https://img.shields.io/badge/Jira-YouTrack-0052CC)
 ![License](https://img.shields.io/badge/license-MIT-blue)
@@ -30,8 +30,8 @@
 
 ## Связанные репозитории
 
-- [`qa-api-tests`](https://github.com/r0meo-1/qa-api-tests) — авто-API-тесты (Postman + Newman + CI).
-- [`sql-data-quality`](https://github.com/r0meo-1/sql-data-quality) — SQL-проверки целостности данных.
+- [`api-automation-tests`](https://github.com/r0meo-1/api-automation-tests) — авто-API-тесты (Postman + Newman + CI).
+- [`data-quality-checks`](https://github.com/r0meo-1/data-quality-checks) — SQL-проверки целостности данных.
 
 ## Стек и навыки
 
